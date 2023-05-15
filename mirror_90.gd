@@ -1,4 +1,4 @@
-class_name mirror_90 extends StaticBody2D
+class_name mirror_90 extends CharacterBody2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

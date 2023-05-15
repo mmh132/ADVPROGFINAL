@@ -6,7 +6,7 @@
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_lodsb"]
 points = PackedVector2Array(0, 0, 1, 0, 0, 1)
 
-[node name="Mirror90" type="StaticBody2D" groups=["mirror"]]
+[node name="Mirror90" type="CharacterBody2D" groups=["mirror"]]
 script = ExtResource("1_owtgi")
 
 [node name="Untitled" type="Sprite2D" parent="."]
