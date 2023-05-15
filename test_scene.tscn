@@ -1,6 +1,26 @@
-[gd_scene format=3 uid="uid://cta82e15y4gjp"]
+[gd_scene load_steps=4 format=3 uid="uid://cta82e15y4gjp"]
+
+[ext_resource type="PackedScene" uid="uid://cleenj4d0gtff" path="res://player.tscn" id="1_cpvxu"]
+[ext_resource type="PackedScene" uid="uid://f5lv4wb7k8tx" path="res://mirror_90.tscn" id="2_0byxk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6wpxw"]
+size = Vector2(1002.5, 20)
 
 [node name="TestScene" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 format = 2
+
+[node name="Player" parent="." instance=ExtResource("1_cpvxu")]
+position = Vector2(221, 319)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(431.75, 146)
+
+[node name="Mirror90" parent="." instance=ExtResource("2_0byxk")]
+position = Vector2(632, 321)
+rotation = 3.14159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(605, 448)
+shape = SubResource("RectangleShape2D_6wpxw")

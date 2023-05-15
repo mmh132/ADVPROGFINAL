@@ -1,3 +1,3 @@
 [gd_scene format=3 uid="uid://dmumxqa75l115"]
 
-[node name="Emitter" type="Node2D"]
+[node name="Player" type="CharacterBody2D"]

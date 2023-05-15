@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://f5lv4wb7k8tx"]
+[gd_scene load_steps=4 format=3 uid="uid://f5lv4wb7k8tx"]
 
-[node name="Mirror90" type="Node2D"]
+[ext_resource type="Script" path="res://mirror_90.gd" id="1_owtgi"]
+[ext_resource type="Texture2D" uid="uid://b85l78oaafqh7" path="res://Untitled.png" id="2_4chyh"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_lodsb"]
+points = PackedVector2Array(0, 0, 1, 0, 0, 1)
+
+[node name="Mirror90" type="StaticBody2D" groups=["mirror"]]
+script = ExtResource("1_owtgi")
+
+[node name="Untitled" type="Sprite2D" parent="."]
+position = Vector2(-5, -1)
+rotation = 1.5708
+scale = Vector2(1.60989, 1.69702)
+texture = ExtResource("2_4chyh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-53, -50)
+scale = Vector2(100, 100)
+shape = SubResource("ConvexPolygonShape2D_lodsb")
