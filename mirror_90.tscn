@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://mirror_90.gd" id="1_owtgi"]
 [ext_resource type="Texture2D" uid="uid://b85l78oaafqh7" path="res://Untitled.png" id="2_4chyh"]
 
-[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_lodsb"]
-points = PackedVector2Array(0, 0, 1, 0, 0, 1)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llwgr"]
+size = Vector2(1.25744, 0.158135)
 
 [node name="Mirror90" type="CharacterBody2D" groups=["mirror"]]
 script = ExtResource("1_owtgi")
@@ -16,6 +16,7 @@ scale = Vector2(1.60989, 1.69702)
 texture = ExtResource("2_4chyh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-53, -50)
+position = Vector2(-6, -1.52588e-05)
+rotation = 2.39285
 scale = Vector2(100, 100)
-shape = SubResource("ConvexPolygonShape2D_lodsb")
+shape = SubResource("RectangleShape2D_llwgr")

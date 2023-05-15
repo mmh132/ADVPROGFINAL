@@ -19,11 +19,11 @@ func _process(delta):
 	line.clear_points()
 	
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		line.add_point((Vector2(0,0)))
+		line.add_point(Vector2(0,0))
 		ray.global_position = line.global_position
 		ray.target_position = Vector2(maxLazerDist,0)
 		ray.force_raycast_update()
-
+	
 	
 		while true:
 			if ray.is_colliding() == false:
@@ -35,13 +35,13 @@ func _process(delta):
 			var pt = ray.get_collision_point()
 			line.add_point(line.to_local(pt))
 			
-			if collision.is_class("mirror"):
+			if not collision.is_in_group("mirror"):
 				break	
-			
 			var norm = ray.get_collision_normal()
+			"""
 			if norm == Vector2(0,0):
 				break		
-			
+			"""
 			ray.global_position = pt
 			ray.target_position = ray.target_position.bounce(norm)
 			ray.force_raycast_update()

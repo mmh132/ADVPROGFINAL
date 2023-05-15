@@ -1042,6 +1042,7 @@ position = Vector2(629, 525)
 rotation = 3.14159
 
 [node name="Mirror91" parent="." instance=ExtResource("2_0byxk")]
+visible = false
 position = Vector2(627, 206)
 rotation = -6.28319
 
