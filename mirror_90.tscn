@@ -10,7 +10,7 @@ points = PackedVector2Array(0, 0, 1, 0, 0, 1)
 script = ExtResource("1_owtgi")
 
 [node name="Untitled" type="Sprite2D" parent="."]
-position = Vector2(-5, -1)
+position = Vector2(-3, -3.8147e-06)
 rotation = 1.5708
 scale = Vector2(1.60989, 1.69702)
 texture = ExtResource("2_4chyh")
