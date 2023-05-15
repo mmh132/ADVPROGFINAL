@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dwbtm0bfp5rc2"]
+[gd_scene load_steps=8 format=3 uid="uid://dwbtm0bfp5rc2"]
 
 [ext_resource type="PackedScene" uid="uid://5hlafvjfasn4" path="res://emitter.tscn" id="1_cpvxu"]
 [ext_resource type="Texture2D" uid="uid://boqcvot0icesk" path="res://Platformer Tiles.png" id="1_jenea"]
 [ext_resource type="PackedScene" uid="uid://f5lv4wb7k8tx" path="res://mirror_90.tscn" id="2_0byxk"]
 [ext_resource type="PackedScene" uid="uid://dmumxqa75l115" path="res://player.tscn" id="4_pgypq"]
+[ext_resource type="PackedScene" uid="uid://b0h7oqpi8dyyu" path="res://powerstation.tscn" id="5_gcyym"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_70cu3"]
 texture = ExtResource("1_jenea")
@@ -1053,3 +1054,6 @@ position = Vector2(572, 321)
 position = Vector2(338, 351)
 
 [node name="Player" parent="." instance=ExtResource("4_pgypq")]
+
+[node name="powerstation" parent="." instance=ExtResource("5_gcyym")]
+position = Vector2(579, 27)
