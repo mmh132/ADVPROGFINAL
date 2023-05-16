@@ -1047,11 +1047,11 @@ scale = Vector2(0.5, 0.5)
 position = Vector2(572, 321)
 
 [node name="Emitter" parent="." instance=ExtResource("1_cpvxu")]
-position = Vector2(333, 540)
+position = Vector2(205, 537)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("4_pgypq")]
-position = Vector2(139, 449)
+position = Vector2(57, 424)
 scale = Vector2(0.3, 0.3)
 
 [node name="powerstation" parent="." instance=ExtResource("5_gcyym")]
@@ -1063,6 +1063,6 @@ rotation = 3.14159
 scale = Vector2(0.5, 0.5)
 
 [node name="Mirror92" parent="." instance=ExtResource("2_0byxk")]
-position = Vector2(508, 535)
+position = Vector2(194, 226)
 rotation = 3.14159
 scale = Vector2(0.5, 0.5)
