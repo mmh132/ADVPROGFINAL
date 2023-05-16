@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwbtm0bfp5rc2"]
 
-[ext_resource type="PackedScene" uid="uid://5hlafvjfasn4" path="res://emitter.tscn" id="1_cpvxu"]
+[ext_resource type="PackedScene" uid="uid://bjylaemo4onlv" path="res://emitter.tscn" id="1_cpvxu"]
 [ext_resource type="Texture2D" uid="uid://boqcvot0icesk" path="res://Platformer Tiles.png" id="1_jenea"]
-[ext_resource type="PackedScene" uid="uid://f5lv4wb7k8tx" path="res://mirror_90.tscn" id="2_0byxk"]
+[ext_resource type="PackedScene" uid="uid://cqw3nf4wwk274" path="res://mirror_90.tscn" id="2_0byxk"]
 [ext_resource type="PackedScene" uid="uid://dmumxqa75l115" path="res://player.tscn" id="4_pgypq"]
 [ext_resource type="PackedScene" uid="uid://b0h7oqpi8dyyu" path="res://powerstation.tscn" id="5_gcyym"]
 
@@ -1040,23 +1040,29 @@ layer_0/tile_data = PackedInt32Array(2359296, 1441792, 7, 2359297, 1441792, 7, 2
 
 [node name="Mirror90" parent="." instance=ExtResource("2_0byxk")]
 position = Vector2(510, 292)
-rotation = 3.14159
+rotation = -6.28319
 scale = Vector2(0.5, 0.5)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(572, 321)
 
 [node name="Emitter" parent="." instance=ExtResource("1_cpvxu")]
-position = Vector2(415, 475)
+position = Vector2(333, 540)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("4_pgypq")]
-position = Vector2(981, 166)
-scale = Vector2(0.5, 0.5)
+position = Vector2(139, 449)
+scale = Vector2(0.3, 0.3)
 
 [node name="powerstation" parent="." instance=ExtResource("5_gcyym")]
 position = Vector2(579, 27)
 
 [node name="Mirror91" parent="." instance=ExtResource("2_0byxk")]
-position = Vector2(678, 501)
+position = Vector2(655, 292)
 rotation = 3.14159
+scale = Vector2(0.5, 0.5)
+
+[node name="Mirror92" parent="." instance=ExtResource("2_0byxk")]
+position = Vector2(508, 535)
+rotation = 3.14159
+scale = Vector2(0.5, 0.5)

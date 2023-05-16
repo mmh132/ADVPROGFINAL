@@ -1,5 +1,20 @@
-class_name mirror_90 extends RigidBody2D
+class_name mirror_90 extends CharacterBody2D
 
-func _integrate_forces(state):
-	angular_velocity = 0
-	rotation_degrees = 0
+var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+@onready
+var push = $Area2D
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+
+
+func _physics_process(delta):
+	# Add the gravity.
+	if not is_on_floor():
+		velocity.y += gravity * delta
+	
+	
+	move_and_slide()

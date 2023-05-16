@@ -3,7 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
-const maxLazerDist = 500
+const maxLazerDist = 1000
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -28,10 +28,7 @@ func _process(delta):
 		ray.target_position = Vector2(maxLazerDist,0)
 		ray.force_raycast_update()
 	
-	
 		while true:
-			
-			print(ray.is_colliding())
 			
 			if ray.is_colliding() == false:
 				var pt = ray.global_position + ray.target_position
@@ -45,7 +42,6 @@ func _process(delta):
 			if collision.is_in_group("power_station"):
 				print("winning")
 				
-			
 			if not collision.is_in_group("mirror"):
 				break	
 			var norm = ray.get_collision_normal()
