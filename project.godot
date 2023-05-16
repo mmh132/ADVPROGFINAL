@@ -11,6 +11,6 @@ config_version=5
 [application]
 
 config/name="Advprogfinal"
-run/main_scene="res://test_scene.tscn"
+run/main_scene="res://testscene2.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
