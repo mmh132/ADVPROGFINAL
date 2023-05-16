@@ -24,3 +24,4 @@ texture = ExtResource("3_gsm81")
 texture_mode = 2
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+collide_with_areas = true

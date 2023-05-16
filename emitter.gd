@@ -16,6 +16,7 @@ var line = $Line2D
 var texture = $Line2D/Laser
 
 var prev = null
+var push:int = 0
 
 func _process(delta):
 	line.clear_points()
@@ -29,6 +30,9 @@ func _process(delta):
 	
 	
 		while true:
+			
+			print(ray.is_colliding())
+			
 			if ray.is_colliding() == false:
 				var pt = ray.global_position + ray.target_position
 				line.add_point(line.to_local(pt))
@@ -40,13 +44,15 @@ func _process(delta):
 			
 			if collision.is_in_group("power_station"):
 				print("winning")
+				
+			
 			if not collision.is_in_group("mirror"):
 				break	
 			var norm = ray.get_collision_normal()
-			"""
+			
 			if norm == Vector2(0,0):
 				break		
-			"""
+			
 			ray.global_position = pt
 			ray.target_position = ray.target_position.bounce(norm)
 			ray.force_raycast_update()
@@ -56,5 +62,5 @@ func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
-
+	
 	move_and_slide()

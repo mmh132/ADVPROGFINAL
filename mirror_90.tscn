@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llwgr"]
 size = Vector2(1.25744, 0.158135)
 
-[node name="Mirror90" type="CharacterBody2D" groups=["mirror"]]
+[node name="Mirror90" type="RigidBody2D" groups=["mirror"]]
 script = ExtResource("1_owtgi")
 
 [node name="Untitled" type="Sprite2D" parent="."]
@@ -16,7 +16,7 @@ scale = Vector2(1.60989, 1.69702)
 texture = ExtResource("2_4chyh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6, -1.52588e-05)
+position = Vector2(-8, -3)
 rotation = 2.39285
 scale = Vector2(100, 100)
 shape = SubResource("RectangleShape2D_llwgr")
