@@ -1,4 +1,4 @@
-class_name mirror_90 extends CharacterBody2D
+class_name mirror_90 extends RigidBody2D
 
 const pushspeed = 100
 
@@ -14,7 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
-
+"""
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -31,3 +31,4 @@ func _physics_process(delta):
 	
 	
 	move_and_slide()
+"""
