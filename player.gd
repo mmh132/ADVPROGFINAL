@@ -8,6 +8,11 @@ const JUMP_VELOCITY = -500.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
+func _ready() -> void:
+	
+	pass
+	
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -28,5 +33,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		if is_on_floor(): $AnimatedSprite2D.play("idle")
 		
-	#move_and_slide(velocity, Vector2(0,0), false, 4, 0.785398, true)
+
 	move_and_slide()
+	
+
+	

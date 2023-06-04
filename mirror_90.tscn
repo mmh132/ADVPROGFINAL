@@ -6,23 +6,24 @@
 [ext_resource type="Script" path="res://Left.gd" id="4_uvibe"]
 
 [sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_cqqen"]
-points = PackedVector2Array(0.7, -0.7, 0, 0, -0.7, -0.7)
+points = PackedVector2Array(0.35, -0.35, 0, 0, -0.35, -0.35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_injqv"]
 
 [node name="Mirror90" type="RigidBody2D" groups=["mirror"]]
-freeze = true
+collision_layer = 9
+collision_mask = 11
 script = ExtResource("1_owtgi")
 
 [node name="Laser" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-2.38419e-07, -4.54747e-13)
+position = Vector2(-5.72205e-06, 1)
 rotation = -3.14159
-scale = Vector2(6.375, 6.125)
+scale = Vector2(3.18301, 3.05818)
 texture = ExtResource("2_6q824")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-50, -49)
+position = Vector2(-26, -24)
 rotation = 2.35619
 scale = Vector2(100, 100)
 shape = SubResource("ConvexPolygonShape2D_cqqen")
