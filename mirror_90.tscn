@@ -5,41 +5,47 @@
 [ext_resource type="Script" path="res://Right.gd" id="3_sbuqx"]
 [ext_resource type="Script" path="res://Left.gd" id="4_uvibe"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_llwgr"]
-size = Vector2(1.25744, 0.158135)
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_cqqen"]
+points = PackedVector2Array(0.35, -0.35, 0, 0, -0.35, -0.35)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_injqv"]
 
-[node name="Mirror90" type="CharacterBody2D" groups=["mirror"]]
+[node name="Mirror90" type="RigidBody2D" groups=["mirror"]]
+collision_layer = 9
+collision_mask = 11
 script = ExtResource("1_owtgi")
 
 [node name="Laser" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(-5.00001, -2.99999)
+position = Vector2(-5.72205e-06, 1)
 rotation = -3.14159
-scale = Vector2(6.375, 6.125)
+scale = Vector2(3.18301, 3.05818)
 texture = ExtResource("2_6q824")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-9, -8)
+position = Vector2(-26, -24)
 rotation = 2.35619
 scale = Vector2(100, 100)
-shape = SubResource("RectangleShape2D_llwgr")
+shape = SubResource("ConvexPolygonShape2D_cqqen")
 
 [node name="Right" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("3_sbuqx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+visible = false
 position = Vector2(46, 0)
 shape = SubResource("RectangleShape2D_injqv")
 
 [node name="Left" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("4_uvibe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+visible = false
 position = Vector2(-56, -1)
 shape = SubResource("RectangleShape2D_injqv")
