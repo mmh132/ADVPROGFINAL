@@ -4,7 +4,7 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 const maxLazerDist = 10000
-
+const pi = 3.14159265358
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -18,6 +18,10 @@ var texture = $Line2D/Laser
 var prev = null
 var push:int = 0
 
+
+func _ready():
+	pass
+
 func _process(delta):
 	line.clear_points()
 	
@@ -25,7 +29,9 @@ func _process(delta):
 		
 		line.add_point(Vector2(0,0))
 		ray.global_position = line.global_position
-		ray.target_position = Vector2(maxLazerDist,0)
+		#print(self.rotation_degrees)
+		#ray.target_position = Vector2(cos((self.rotation_degrees)*(pi/180)), sin((self.rotation_degrees)*(pi/180))).normalized() * maxLazerDist
+		ray.target_position = Vector2(maxLazerDist, 0)
 		ray.force_raycast_update()
 	
 		while true:
@@ -38,6 +44,7 @@ func _process(delta):
 			var collision = ray.get_collider()
 			var pt = ray.get_collision_point()
 			line.add_point(line.to_local(pt))
+			
 			
 			if collision.is_in_group("power_station"):
 				print("winning")

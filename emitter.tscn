@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://hxg4gcbdrr2e" path="res://emitr.png" id="4_t7tm1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jqvmj"]
-size = Vector2(93, 126)
+size = Vector2(12.5, 14)
 
 [node name="Emitter" type="CharacterBody2D"]
 collision_layer = 4
@@ -13,11 +13,11 @@ collision_mask = 4
 script = ExtResource("1_nak6u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, -1)
 shape = SubResource("RectangleShape2D_jqvmj")
 
 [node name="Line2D" type="Line2D" parent="."]
 points = PackedVector2Array(-1, 0)
+width = 5.0
 texture = ExtResource("3_gsm81")
 texture_mode = 2
 
@@ -28,5 +28,4 @@ collide_with_areas = true
 [node name="Emitr" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(1, 0)
-scale = Vector2(7.875, 7.875)
 texture = ExtResource("4_t7tm1")

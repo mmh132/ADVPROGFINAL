@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://clvbyhwx1kdtx"]
+
+[ext_resource type="Script" path="res://text_box.gd" id="1_hajaw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gosu0"]
+bg_color = Color(0, 0, 0, 0.368627)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[sub_resource type="SystemFont" id="SystemFont_2ebbp"]
+
+[node name="TextBox" type="CanvasLayer"]
+script = ExtResource("1_hajaw")
+
+[node name="TextBoxContainer" type="MarginContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 184.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Panel" type="Panel" parent="TextBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_gosu0")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Panel" type="Panel" parent="TextBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBoxContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TextBoxContainer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_fonts/font = SubResource("SystemFont_2ebbp")
+text = "placeholder"
+autowrap_mode = 3

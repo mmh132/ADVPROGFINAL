@@ -1043,11 +1043,12 @@ layer_0/tile_data = PackedInt32Array(2359296, 1441792, 7, 2359297, 1441792, 7, 2
 position = Vector2(572, 321)
 
 [node name="Emitter" parent="." instance=ExtResource("1_cpvxu")]
-position = Vector2(179, 543)
+position = Vector2(398, 554)
+rotation = 3.14159
 scale = Vector2(0.5, 0.5)
 
 [node name="Player" parent="." instance=ExtResource("4_pgypq")]
-position = Vector2(343, 496)
+position = Vector2(268, 539)
 scale = Vector2(2, 2)
 
 [node name="powerstation" parent="." instance=ExtResource("5_gcyym")]
@@ -1058,7 +1059,7 @@ position = Vector2(655, 292)
 scale = Vector2(0.5, 0.5)
 
 [node name="Mirror92" parent="." instance=ExtResource("2_0byxk")]
-position = Vector2(513, 521)
+position = Vector2(329, 546)
 scale = Vector2(0.5, 0.5)
 
 [node name="Mirror90" parent="." instance=ExtResource("2_0byxk")]
