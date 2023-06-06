@@ -13,6 +13,7 @@ func next_level():
 		change_scene("res://Level2.tscn")
 	if level == 3:
 		pass
+	level += 1
 	pass
 	
 

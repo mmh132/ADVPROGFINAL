@@ -10,6 +10,7 @@ border_width_right = 2
 border_width_bottom = 2
 
 [sub_resource type="SystemFont" id="SystemFont_2ebbp"]
+subpixel_positioning = 0
 
 [node name="TextBox" type="CanvasLayer"]
 script = ExtResource("1_hajaw")

@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+#used https://www.youtube.com/watch?v=QEHOiORnXIk
+
 @onready
 var textBoxContainer = $TextBoxContainer
 @onready
@@ -23,7 +25,7 @@ func _ready():
 	hide_textbox()
 	queue_text("This is the toutorial, spam t and press on the text box to continue")
 	queue_text("your character moves with w, s and the space bar. figure it out")
-	queue_text("if you are close to a mirror, press r to rotate it")
+	queue_text("if you are close to a mirror, press r to rotate it, please dont stand on them they are sensitive")
 	queue_text("press left click to shoot the lazer, push and rotate the mirrors so the lazer hits the reciever")
 	queue_text("what are you waiting for?")
 	queue_text("dont you dare press t again")
