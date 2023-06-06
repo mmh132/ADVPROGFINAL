@@ -8,4 +8,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	pass
+	var overlappingBodies = get_overlapping_bodies()
+	if overlappingBodies:
+		for body in overlappingBodies:
+			if body.name == "Player":
+				#print("playerin")
+				if Input.is_action_just_pressed("Rotate"):
+					#print("rotating")
+					self.get_parent().degree += 90
+			#else:
+				#print("nobody aint here bucko")
+					

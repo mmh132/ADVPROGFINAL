@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqw3nf4wwk274"]
+
+[ext_resource type="Script" path="res://mirror_90.gd" id="1_owtgi"]
+[ext_resource type="Texture2D" uid="uid://buo1ipjve0551" path="res://mirror.png" id="2_6q824"]
+[ext_resource type="Script" path="res://Area2D.gd" id="3_s27bh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1jnxr"]
+size = Vector2(50, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onjl5"]
+size = Vector2(69, 66.5)
+
+[node name="Mirror90" type="RigidBody2D" groups=["mirror"]]
+position = Vector2(-9, -12)
+collision_layer = 8
+script = ExtResource("1_owtgi")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["mirror"]]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="CharacterBody2D"]
+polygon = PackedVector2Array(25, -20, 25, 25, -20, 25)
+
+[node name="Laser" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-5.72205e-06, 1)
+scale = Vector2(3.18301, 3.05818)
+texture = ExtResource("2_6q824")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_1jnxr")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_s27bh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_onjl5")

@@ -8,6 +8,8 @@
 size = Vector2(93, 126)
 
 [node name="Emitter" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 4
 script = ExtResource("1_nak6u")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -20,6 +22,7 @@ texture = ExtResource("3_gsm81")
 texture_mode = 2
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+collision_mask = 2
 collide_with_areas = true
 
 [node name="Emitr" type="Sprite2D" parent="."]
