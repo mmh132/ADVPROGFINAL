@@ -19,7 +19,11 @@ var prev = null
 var push:int = 0
 
 
+signal win
+
 func _ready():
+	var transition = get_node("/root/TransitionScenes")
+	connect("win", transition.next_level)
 	pass
 
 func _process(delta):
@@ -48,6 +52,8 @@ func _process(delta):
 			
 			if collision.is_in_group("power_station"):
 				print("winning")
+				win.emit()
+				break
 				
 			if not collision.is_in_group("mirror"):
 				break	
@@ -68,3 +74,7 @@ func _physics_process(delta):
 	
 	#move_and_slide()
 	pass
+
+
+func _on_win():
+	pass # Replace with function body.
