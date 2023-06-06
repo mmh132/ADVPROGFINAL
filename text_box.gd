@@ -15,11 +15,13 @@ enum State {
 
 var curstate = State.READY
 var text_queue = []
-var tween = create_tween()
+
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	hide_textbox()
-	queue_text("This is the toutorial, press t to continue")
+	queue_text("This is the toutorial, spam t and press on the text box to continue")
 	queue_text("your character moves with w, s and the space bar. figure it out")
 	queue_text("if you are close to a mirror, press r to rotate it")
 	queue_text("press left click to shoot the lazer, push and rotate the mirrors so the lazer hits the reciever")
@@ -39,9 +41,8 @@ func _process(delta):
 		if len(text_queue) != 0:
 			display_text()
 	elif curstate == State.READING:
-		if Input.is_action_just_pressed("ui_accept"):
-			label.percent_visible = 1.0
-			tween.remove_all()
+		if Input.is_action_just_pressed("Text"):
+			label.visible_ratio = 1.0
 			curstate = State.DONE
 	else:
 		if Input.is_action_just_pressed("Text"):
@@ -58,11 +59,14 @@ func show_textbox():
 func display_text():
 	var next_text = text_queue.pop_front()
 	label.text = next_text
-	label.visible = false
+	label.visible_ratio = 0
 	curstate = State.READING
 	show_textbox()
-	tween.interpolate_value("percent_visible", 0.0, 1.0, len(next_text) * READ_RATE, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT)
-	tween.start()
+	var tweener = create_tween()
+	tweener.tween_property(label, "visible_ratio", 1, 3)
+	
+	#tweener.interpolate_property(label, "visible_ratio", 1, 2)
+	#0.0, 1.0, 0 len(next_text) * READ_RATE, Tween.TRANS_LINEAR, Tween.EASE_IN_OUT
 	
 
 

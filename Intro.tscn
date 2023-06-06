@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dki4s16wuieaf"]
+[gd_scene load_steps=10 format=3 uid="uid://dki4s16wuieaf"]
 
 [ext_resource type="Texture2D" uid="uid://b4t30td0ajvd0" path="res://Assets_area_1/Tileset/Subway_tiles.png" id="1_h3dag"]
 [ext_resource type="Texture2D" uid="uid://d0jtp74sl5una" path="res://Assets_area_1/Background/subway_BG.png" id="2_r4lpq"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dmumxqa75l115" path="res://player.tscn" id="3_cas6a"]
 [ext_resource type="PackedScene" uid="uid://bjylaemo4onlv" path="res://emitter.tscn" id="4_gr1vk"]
 [ext_resource type="PackedScene" uid="uid://cqw3nf4wwk274" path="res://mirror_90_dynamic.tscn" id="4_jjk5x"]
+[ext_resource type="PackedScene" uid="uid://clvbyhwx1kdtx" path="res://text_box.tscn" id="7_gf6ht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j70na"]
 texture = ExtResource("1_h3dag")
@@ -1402,3 +1403,5 @@ position = Vector2(778, 457)
 [node name="powerstation" parent="." instance=ExtResource("3_b2g75")]
 position = Vector2(975, 460)
 scale = Vector2(2.37868, 2.54596)
+
+[node name="TextBox" parent="." instance=ExtResource("7_gf6ht")]

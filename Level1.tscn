@@ -1373,9 +1373,9 @@ position = Vector2(428, 460)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(1045, 66)
+position = Vector2(-2.5, -1)
 limit_left = -300
-limit_right = 1500
+limit_right = 2500
 limit_bottom = 650
 
 [node name="Mirror90" parent="." instance=ExtResource("5_cvtj6")]
