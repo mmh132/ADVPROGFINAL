@@ -1,17 +1,20 @@
 [gd_scene load_steps=3 format=3 uid="uid://b0h7oqpi8dyyu"]
 
-[ext_resource type="Texture2D" uid="uid://b13rwxeg07a4m" path="res://icon.svg" id="1_xpjlc"]
+[ext_resource type="Texture2D" uid="uid://73oo7hh7v3y8" path="res://reebur.png" id="2_8vd2i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_17db3"]
-size = Vector2(120.5, 120)
+size = Vector2(100.5, 120)
 
 [node name="powerstation" type="CharacterBody2D" groups=["power_station"]]
-modulate = Color(0, 0, 0, 1)
-
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(96, 81)
-texture = ExtResource("1_xpjlc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(96.75, 79)
+position = Vector2(86.75, 79)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_17db3")
+
+[node name="Reebur" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(86, 88)
+rotation = 1.5708
+scale = Vector2(7.75, 7.75)
+texture = ExtResource("2_8vd2i")
